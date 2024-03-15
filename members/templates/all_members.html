@@ -1,0 +1,28 @@
+{% extends "master.html" %}
+<head>
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+
+{% block title %}
+  Turnos Taller Mecanico
+{% endblock %}
+
+{% block content %}
+  <p><a href="/">HOME</a></p>
+
+  <h1>Turnos</h1>
+  
+  <ul>
+    {% for x in mymembers %}
+      <li>
+        <a href="details/{{ x.id }}">
+          Nombre: {{ x.nombre }} <br>
+          Vehiculo: {{ x.vehiculo }} <br>
+          Reparacion: {{ x.reparacion }}
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+{% endblock %}

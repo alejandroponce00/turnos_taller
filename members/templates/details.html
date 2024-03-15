@@ -1,0 +1,21 @@
+{% extends "master.html" %}
+
+
+{% block title %}
+Turno de : {{ mymember.nombre }} {{ mymember.vehiculo  }} {{ mymember.reparacion  }}
+{% endblock %}
+
+
+{% block content %}
+  <h1>{{ mymember.nombre }} 
+  </h1>
+  
+  <p>Vehiculo:{{ mymember.vehiculo }}</p>
+  
+   <p>Reparacion: {{ mymember.reparacion}}</p>
+
+  <p>fecha del turno: {{ mymember.joined_date }}</p>
+  
+  <p>Back to <a href="/members">Principal</a></p>
+  
+{% endblock %}

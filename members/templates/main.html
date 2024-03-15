@@ -1,0 +1,31 @@
+{% extends "master.html" %}
+{% load static %}
+
+ <!DOCTYPE html>
+
+<html>
+<head>
+  {% load bootstrap5 %}
+  {% bootstrap_css %}
+  {% bootstrap_javascript %}
+</head>
+ 
+
+<body>
+  <div class="container">
+{% block title %}
+  My taller mecanico
+{% endblock %}
+
+
+{% block content %}
+  <h1 class= ".text-warning">My Taller mecanico</h1>
+
+  <h3>Aplicacion para gestionar Turnos</h3>
+  
+  <p>Ver turnos <a href="members/">Aqui</a></p>
+  
+{% endblock %}
+</div>
+</body>
+</html>
